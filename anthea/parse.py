@@ -22,6 +22,5 @@ for section_soup in section_soups:
     shows.append(show)
 
 with open("out.csv", "w") as f:
-  f.write("{};{};{};{};{}\n".format("Location", "Title", "Date", "Image", "Link"))
   for show in shows:
     f.write(show.to_str() + "\n")

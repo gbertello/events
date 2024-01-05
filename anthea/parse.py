@@ -3,7 +3,7 @@
 from bs4 import BeautifulSoup
 from showAnthea import ShowAnthea
 
-with open("anthea.html", "r") as f:
+with open("in.html", "r") as f:
   html = f.read()
 
 shows = []
@@ -21,7 +21,7 @@ for section_soup in section_soups:
     show.read(show_soup)
     shows.append(show)
 
-with open("anthea.csv", "w") as f:
-  f.write("{};{};{};{}\n".format("Title", "Date", "Image", "Link"))
+with open("out.csv", "w") as f:
+  f.write("{};{};{};{};{}\n".format("Location", "Title", "Date", "Image", "Link"))
   for show in shows:
     f.write(show.to_str() + "\n")

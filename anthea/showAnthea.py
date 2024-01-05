@@ -14,6 +14,7 @@ class ShowAnthea(Show):
 
   def read(self, soup):
     self.soup = soup
+    self.location = "Anthea"
     self.read_title()
     self.read_image()
     self.read_link()
@@ -54,5 +55,5 @@ class ShowAnthea(Show):
   def to_str(self):
     lines = []
     for d in self.dates:
-      lines.append("{};{};{};{}".format(self.title, d, self.img, self.link))
+      lines.append("{};{};{};{};{}".format(self.location, self.title, d, self.img, self.link))
     return "\n".join(lines)

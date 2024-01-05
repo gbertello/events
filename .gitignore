@@ -1,6 +1,4 @@
 __pycache__
 .venv
 .vscode
-
-anthea.html
-anthea.csv
+.DS_Store

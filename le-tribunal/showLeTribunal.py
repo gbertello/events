@@ -70,9 +70,3 @@ class ShowLeTribunal(Show):
       delta = date2 - date1
       for i in range(delta.days + 1):
         self.dates.append(date1 + timedelta(days=i))
-
-  def to_str(self):
-    lines = []
-    for d in self.dates:
-      lines.append("{};{};{};{};{}".format(self.location, self.title, d, self.img, self.link))
-    return "\n".join(lines)

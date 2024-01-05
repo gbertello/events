@@ -51,9 +51,3 @@ class ShowAnthea(Show):
 
       for day in days:
         self.dates.append(date(year, month, day))
-
-  def to_str(self):
-    lines = []
-    for d in self.dates:
-      lines.append("{};{};{};{};{}".format(self.location, self.title, d, self.img, self.link))
-    return "\n".join(lines)

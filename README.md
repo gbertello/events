@@ -1,4 +1,4 @@
-To run the file use the following commands:
+To run the program, use the following commands:
 
 ```
 python3 -m venv .venv
